@@ -1,0 +1,5 @@
+﻿id,group,name,description,cidr,domain_id,country_code
+10,Group_1,Test_Name,Test_Desc,192.168.10.0/24,6,
+11,Group_1,Test_Name,Test_Desc,192.168.11.0/24,6,US
+12,Group_2,Test_Name,Test_Desc,10.10.10.0/24,2,
+13,Group_3,Test_Name,Test_Desc,192.168.20.0/24,3,KR
