@@ -3,7 +3,8 @@ Python script to import Network Hierarchy info into IBM QRadar.
 
 In this repository, you will find a script allowing you to back up or update the network hierarchy in Qradar using the API. The current way to update the network hierarchy is through the GUI, but if you have a large number of networks this is a nightmare.
 
-Ref: https://github.com/chmedinap/Qradar-Manage_Network_Hierarchy
+Ref: github.com/chmedinap/Qradar-Manage_Network_Hierarchy
+
 I customized the code in some places to adapt to my needs.
 
 ## How it works
