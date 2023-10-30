@@ -1,19 +1,22 @@
 # IBM-QRadar-Network-Hierarchy
 Python script to import Network Hierarchy info into IBM QRadar.
 
-In this repository you will find a script that will allow you to backup or update the network hierarchy in Qradar using the API. The current way to update the network hierarchy is through the GUI, but if you have a large number of networks this is a nightmare.
+In this repository, you will find a script allowing you to back up or update the network hierarchy in Qradar using the API. The current way to update the network hierarchy is through the GUI, but if you have a large number of networks this is a nightmare.
+
+Ref: https://github.com/chmedinap/Qradar-Manage_Network_Hierarchy
+I customized the code in some places to adapt my needs.
 
 ## How it works
 
-- Step 1: The script will get the current network hierarchy as backup. JSON format.
+- Step 1: The script will get the current network hierarchy as a backup. JSON format.
 - Step 2: The script will get the domains because we need the domain_id to create the network hierarchy. 
-- Step 3: You need to manually create a CSV file with the new networks in like this:
+- Step 3: You need to manually create a CSV file with the new networks like this:
 ```csv
 id,group,name,description,cidr,domain_id,country_code
 10,Group_1,Test_Name,Test_Desc,192.168.10.0/24,6,
 ```
  **Notes:**
-  The script will get the max id of current network hierarchy. So the new ids will be the max id in networks **+1, +2, +3**, etc.
+  The script will get the max ID of the current network hierarchy. So the new IDs will be the max ID in networks **+1, +2, +3**, etc.
 
 
 - Step 4: As the API is designed to **REPLACE** the current network hierarchy, we need to merge the CSV file with the 
@@ -24,7 +27,7 @@ current network hierarchy.
 
 ## API Reference:
 
-This are the API endpoints that are used in the script.
+These are the API endpoints that are used in the script.
 
 #### GET network_hierarchy: Retrieves the staged network hierarchy.
 
